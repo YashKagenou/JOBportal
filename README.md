@@ -1,132 +1,130 @@
-# Prodigy - MERN Stack Job Portal
+# Job Portal Application
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
-A modern job portal application built with the MERN stack (MongoDB, Express, React, Node.js) where recruiters/companies can post jobs and applicants can search/apply for opportunities. Features dedicated dashboards for both recruiters and applicants.
-
+A full-stack job portal application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform connects recruiters and job seekers through dedicated dashboards, allowing recruiters to manage job postings and applicants to explore opportunities and track applications.
 
 ## Screenshots
 
-![Startup Website Screenshot](./Prodigy.gif)
+![Job Portal Application](./Prodigy.gif)
 
+## Features
 
-## ✨ Features
+### Recruiters / Companies
+- Create and manage job postings.
+- View applications received for posted jobs.
+- Access a dashboard for job and application management.
+- Customize company profiles.
 
-**Recruiters/Companies:**
-- Create and manage job postings
-- View applications for posted jobs
-- Dashboard with analytics and job management
-- Company profile customization
+### Applicants
+- Search and filter available job listings.
+- Apply for jobs with resume/CV submission.
+- Track application statuses.
+- Manage applicant profiles.
 
-**Applicants:**
-- Search/filter job listings
-- Apply to jobs with resume/CV
-- Track application statuses
-- Applicant profile management
+### General
+- Authentication using Clerk.
+- Error monitoring with Sentry.
+- File uploads through Cloudinary.
+- Responsive user interface using Tailwind CSS.
+- RESTful APIs with JWT-based authentication.
 
-**General:**
-- Authentication with Clerk
-- Error monitoring with Sentry
-- File uploads via Cloudinary
-- Responsive UI with Tailwind CSS
-- RESTful API with JWT authentication
-## 🛠️ Tech Stack
+## Tech Stack
 
-**Frontend:**
-- React (Vite)
+### Frontend
+- React.js (Vite)
 - Tailwind CSS
 - React Router
 - Axios
-- Chart.js (for dashboards)
+- Chart.js
 
-**Backend:**
+### Backend
+- Node.js
 - Express.js
-- Mongoose (MongoDB ODM)
+- MongoDB
+- Mongoose
 - JSON Web Tokens (JWT)
-- Bcrypt (password hashing)
+- Bcrypt
 - CORS
-- Svix (webhooks)
+- Svix (Webhooks)
 
-**Third-Party Services:**
-- Clerk (Authentication)
-- Sentry (Error Tracking)
-- Cloudinary (File Storage)
-## 🚀 Getting Started
+### Third-Party Services
+- Clerk – Authentication
+- Sentry – Error Tracking
+- Cloudinary – File Storage
+
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18+)
+- Node.js (v18 or later)
 - MongoDB Atlas account
-- Clerk, Sentry, and Cloudinary accounts
+- Clerk account
+- Sentry account
+- Cloudinary account
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/prodigy-job-portal.git
-   cd prodigy-job-portal
+**1. Clone the repository**
 
-2.  **Client**
+```bash
+git clone https://github.com/YashKagenou/JOBportal.git
+cd JOBportal
+```
 
-    * cd client
+**2. Install frontend dependencies**
 
-    * npm install
+```bash
+cd client
+npm install
+```
 
- **Server**
+**3. Install backend dependencies**
 
-    * cd ../server
-    * npm install
+```bash
+cd ../server
+npm install
+```
 
-3. **Environment Setup**
+### Environment Variables
 
-Create .env files in both client/ and server/ directories:
+Create a `.env` file inside the `server` directory:
 
-* Server (.env):
+```env
+MONGODB_URI=your_mongodb_uri
+CLERK_SECRET_KEY=your_clerk_secret_key
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+SENTRY_DSN=your_sentry_dsn
+CLERK_WEBHOOK_SECRET=your_webhook_secret
+PORT=5000
+```
 
-    MONGODB_URI=your_mongodb_uri
-    CLERK_SECRET_KEY=your_clerk_secret_key
-    JWT_SECRET=your_jwt_secret
-    CLOUDINARY_CLOUD_NAME=your_cloud_name
-    CLOUDINARY_API_KEY=your_api_key
-    CLOUDINARY_API_SECRET=your_api_secret
-    SENTRY_DSN=your_sentry_dsn
-    CLERK_WEBHOOK_SECRET=your_svix_webhook_secret
-    PORT=5000
+Create a `.env` file inside the `client` directory:
 
-* Client (.env):
+```env
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+VITE_API_BASE_URL=http://localhost:5000/api
+```
 
-    VITE_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
-    VITE_API_BASE_URL=http://localhost:5000/api
+### Running the Application
 
+**Start the backend**
 
-# Start backend server
-* cd server
+```bash
+cd server
+npm run dev
+```
 
-* npm run dev
+**Start the frontend in a separate terminal**
 
-# Start frontend (in separate terminal)
-* cd client
+```bash
+cd client
+npm run dev
+```
 
-* npm run dev
-
-
-## 🚀 Contributions
-
-Contributions are welcome! Please follow these steps:
-
-**Fork the repository**
-
-* Create your feature branch (git checkout -b feature/AmazingFeature)
-
-* Commit your changes (git commit -m 'Add some AmazingFeature')
-
-* Push to the branch (git push origin feature/AmazingFeature)
-
-* Open a Pull Request.
+The frontend will be available at the local development URL displayed by Vite.
 
 
-📄 License
-This project is licensed for **personal, non-commercial use only**.
-Commercial use, including but not limited to incorporating this code into proprietary software or services, is strictly prohibited without prior written consent.
-Any unauthorized commercial use may result in legal action.
-Note: Use of this software is prohibited by individuals or entities located in India.
-© 2025 Mazher. All rights reserved.
+## License
+
+Refer to the original repository's LICENSE file for applicable licensing terms and permissions. Original copyright and attribution notices must be retained as required by the applicable license.
